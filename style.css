@@ -1,0 +1,437 @@
+body{
+    background-color: #f5f5f5;
+}
+/* header style */
+nav{
+    z-index: 15;
+    background-color: #000;
+}
+.navbar-brand{
+    font-weight: 600;
+}
+
+.nav-item a{
+color: #fff !important;
+transition: all 0.5s;
+font-weight: 600;
+}
+
+.nav-border::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    border-bottom: #fff solid 2px;
+    transition: width 0.5s;
+}
+.nav-border:hover::after {
+    width: 85%;
+}
+.dropdown-menu a {
+    color: #000 !important;
+}
+.dropdown-menu{
+    top: 200%;
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute !important;
+    transition: all 0.5s;
+
+}
+.dropdown:hover .dropdown-menu{
+    top: 100%;
+    visibility: visible;
+    opacity: 1;
+}
+/* home style  */
+.home h1 {
+    font-size: 3rem;
+}
+.home h3::after {
+    content: '';
+    animation: textanimate 5s  infinite;
+    font-size: 1.5rem;    
+}
+.home , .home-overlay{
+    height: 100vh;
+    width: 100%;
+}
+.home{
+    background-image: url('images/intro-bg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+}
+.home-overlay{
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+}
+@media screen and (min-width:768px){
+    .home h1 {
+        font-size: 4.5rem;
+    }
+    .home h3::after {
+        font-size: 2.5rem;
+    }
+    .navbar-brand{
+    font-size: 1.8rem;
+
+    }
+  
+}
+/* about style */
+.about ul {
+    list-style: none;   
+    line-height: 2.2; 
+}
+.about ul li span {
+    font-weight: bold;
+}
+.about .progress{
+    background-color: #cde1f8;
+    border-radius: 0;
+    height: 0.7rem;
+}
+.about_content{
+    font-size: 1.25rem;
+}
+.subtitle-border::after {
+content: '';
+display: block;
+width: 20%;
+margin: 10px 0;
+border-bottom: #0078ff 3px solid;
+}
+
+/* services style */
+.services h2, .blog h2 , .portfolio h2{
+    font-size: 3rem;
+    font-weight: bold;
+}
+.header-underline::after{
+    content: '';
+    display: block;
+    width: 3%;
+    margin: 10px auto;
+    border-bottom: #0078ff 3px solid;
+}
+.w-90{
+    width: 90%;
+}
+.w-85{
+    width: 85%;
+}
+
+/* services style */
+.card-icon {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 10px solid #0078ff;
+    margin: auto;
+    line-height: 6;
+    transition: all 1s;
+}
+.card-icon:hover{
+    border-color: #cde1f8;
+    background-color: #0078ff;
+
+}
+.card-icon:hover i {
+    color: #fff;
+}
+.card-icon i {
+    font-size: 2rem;
+}
+/* accomplishment style */
+.accomplishment{
+    background-image: url('images/post-3.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    position: relative;
+    color: #fff;
+}
+.accomplishment__over-lay{
+    background-color: #0078ff;
+    opacity: 0.7;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+}
+.accomplishment-icon{
+    width: 80px;
+    height: 80px;
+    margin: auto;
+    border: 10px solid #cde1f8;
+    border-radius: 50%;
+    line-height: 60px;
+}
+.accomplishment h4{
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+.icon-2{
+    font-size: 2rem;
+    line-height: 1.8;
+}
+/* portfolio style */
+.portfolio .card img{
+transition: transform 1s;
+}
+.portfolio .card:hover img {
+transform: scale(1.3);
+}
+.portfolio-icon{
+    color: #0078ff;
+    font-size: 1.5rem;
+    border: 3px solid #0078ff;
+    border-radius: 50%;
+    padding: 0 0.5rem;
+}
+.portfolio .card-text{
+    font-size: 0.8rem;
+}
+.portfolio .card-text span{
+    color: #0078ff;
+}
+/* information style */
+.information , .contact-us{
+    background-image: url('images/overlay-bg.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    position: relative;
+    color: #fff;
+}
+.carousel-caption{
+    position: static;
+}
+.information button {
+   border-radius: 50%;
+   height: 12px !important; 
+   width: 12px !important; 
+}
+.carousel-indicators{
+    position: static;
+}
+.w-15{
+    width: 15%;
+}
+.card-info{
+    transform: translate(-50%,-50%);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+/* contact-us style */
+.contact-us ul {
+    list-style: none;
+    padding: 0;
+}
+.contact-us ul:first-of-type li i  { 
+color: #0078ff;
+padding-right: 0.8rem;
+}
+.contact-us ul:last-child li{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 5px solid #0078ff;
+    transition: all 1s;
+    line-height: 40px;
+    text-align: center;
+    margin: 0 10px;
+}
+
+.contact-us ul:last-child li:hover{
+    border-color: #cde1f8;
+    background-color: #0078ff;
+}
+
+.contact-us ul:last-child li:hover i {
+    color: #fff;
+}
+.contact-us button{
+    border-radius: 40px;
+}
+.contact-us textarea {
+    resize: none;
+}
+/* footer style */
+footer {
+    background-color: #0062d3;
+}
+
+footer p {
+    margin: 0;
+}
+
+.scroll-btn{
+position: fixed;
+bottom: 2%;
+right: 2%;
+}
+.scroll-btn a{
+border-radius: 50%;
+
+}
+@keyframes  textanimate {
+    0%{
+     content: ' F|';
+    }
+    2%{
+        content: ' Fr|';
+       }
+       4%{
+        content: ' Fre|';
+       }
+       6%{
+        content: ' Free|';
+       }
+       8%{
+        content: ' Freel|';
+       }
+       10%{
+        content: ' Freela|';
+       }
+       12%{
+        content: ' Freelan|';
+       }
+       14%{
+        content: ' Freelanc|';
+       }
+       16%{
+        content: ' Freelance|';
+       }
+       18%{
+        content: ' Freelancer|';
+       }
+       20%{
+        content: ' Freelance|';
+       }
+       22%{
+        content: ' Freelanc|';
+       }
+       24%{
+        content: ' Freelan|';
+       }
+       26%{
+        content: ' Freela|';
+       }
+       28%{
+        content: ' Freel|';
+       }
+       30%{
+        content: ' Free|';
+       }
+       32%{
+        content: ' Fre|';
+       }
+       34%{
+        content: ' Fr|';
+       }
+       36%{
+        content: ' F|';
+       }
+       38%{
+        content: ' |';
+       }
+       40%{
+        content: ' D|';
+       }
+       42%{
+        content: ' De|';
+       }
+       44%{
+        content: ' Dev|';
+       }
+       46%{
+        content: ' Deve|';
+       }
+       48%{
+        content: ' Devel|';
+       }
+       50%{
+        content: ' Develo|';
+       }
+       52%{
+        content: ' Develop|';
+       }
+       54%{
+        content: ' Develope|';
+       }
+       56%{
+        content: ' Developer|';
+       }
+       58%{
+        content: ' Develope|';
+       }
+       60%{
+        content: ' Develop|';
+       }
+       62%{
+        content: ' Develo|';
+       }
+       64%{
+        content: ' Devel|';
+       }
+       66%{
+        content: ' Deve|';
+       }
+       68%{
+        content: ' Dev|';
+       }
+       70%{
+        content: ' D|';
+       }
+       72%{
+        content: ' De|';
+       }
+       74%{
+        content: ' Des|';
+       }
+       76%{
+        content: ' Desi|';
+       }
+       78%{
+        content: ' Desig|';
+       }   80%{
+        content: ' Design|';
+       }   82%{
+        content: ' Designe|';
+       }   84%{
+        content: ' Designer|';
+       }   86%{
+        content: ' Designe|';
+       }   88%{
+        content: ' Design|';
+       }   90%{
+        content: ' Desig|';
+       }   92%{
+        content: ' Desi|';
+       }   94%{
+        content: ' Des|';
+       }
+
+       96%{
+        content: ' De|';
+       }
+
+       98%{
+        content: ' D|';
+       }
+
+       100%{
+        content: ' |';
+       }
+
+
+}
